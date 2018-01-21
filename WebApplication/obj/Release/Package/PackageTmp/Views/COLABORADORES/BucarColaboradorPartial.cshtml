@@ -1,0 +1,43 @@
+﻿@using WebApplication.Models;
+@*@using RRSoft.Utils;*@
+@{
+    if (Model.Count == 0)
+    {
+        <div class="text-center">Nenhum registro encontrado!</div>
+    }
+    else
+    {
+        foreach (COLABORADORES emp in Model)
+        {
+            <div class="box box-info">
+                <div class="box-header">
+                    <div class="pull-right box-tools">
+                    </div>
+                    <h3 class="box-title">
+                        <a href="@Url.Action("Details","COLABORADORES",new { id=emp.ID_COLABORADOR})"> @emp.NOME_FANTASIA</a>
+                        @emp.TEL1
+                    </h3>
+                </div>
+                <div class="box-body">
+                    @{
+                        if (emp.TEL1 != null)
+                        {
+                           @emp.TEL1 <br />
+                        }
+                        //Busca municipio IBGE
+
+                        @emp.LOGRADOURO<br />
+                        if (emp.EMAIL != null)
+                        {
+                            @emp.EMAIL<br />
+                        }
+                       // @Html.Raw("Situação: <b>" + emp.STATUS_REGISTRO_OCORRENCIA + "</b>")
+                    }
+                </div>
+                @* Preenche dados de contato *@
+                <div class="box-footer no-border">
+                </div>
+            </div>
+                            }
+                        }
+}

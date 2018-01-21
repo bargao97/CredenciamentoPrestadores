@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication.Models.COLABORADORES>
+@using GridMvc.Html;
+@using WebApplication.Models
+@{
+    ViewBag.Title = "Prestadores";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("BuscarColaborador", "COLABORADORES"))
+{
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <i class="fa fa-search"></i>&nbsp;Pesquisar Empresa
+            </h3>
+        </div>
+        <div class="box-body">
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">CIDADE</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">REGIAO</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">ESPECIALIDADE</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2 " name="cidade" placeholder="Selecione a cidade...">
+                    <option selected="selected" value="">Selecione a cidade...</option>
+                    @foreach (string cred in ViewBag.cidade)
+                    {
+                        <option value="@cred">@cred</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2 " name="regiao" placeholder="Selecione a região...">
+                    <option selected="selected" value="">selecione a região...</option>
+                    @foreach (string cred in ViewBag.regiao)
+                    {
+
+                        <option value="@cred">@cred</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2" name="especialidade" placeholder="Selecione a especialidade...">
+                    <option selected="selected" value="">selecione a especialidade...</option>
+                    @foreach (ESPECIALIDADE_EXAMES cred in ViewBag.especialidade)
+                    {
+                        <option value="@cred.NOME_ESPECIALIDADE">@cred.NOME_ESPECIALIDADE</option>
+                    }
+                </select>
+            </div>
+            <div class="input-group input-group-sm col-md-12" style="padding: 0px 10px 0px 10px;">
+                <input type="text" class="form-control" name="query">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+                </span>
+            </div>
+        </div>
+        <div class="box-footer clearfix no-border"></div>
+    </div>
+}
+@Html.Grid(Model).AutoGenerateColumns().Columns(Columns =>
+{
+Columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(d => @<b>@Html.ActionLink("Detalhes", "Details", new { id = d.ID_COLABORADOR })</b>);
+}).Filterable(true)

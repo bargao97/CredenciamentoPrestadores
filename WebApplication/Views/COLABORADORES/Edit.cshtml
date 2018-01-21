@@ -1,0 +1,325 @@
+﻿@model WebApplication.Models.COLABORADORES
+@using WebApplication.Models
+
+@{
+    ViewBag.Title = "Editar"+ ":"+Model.NOME_FANTASIA;
+}
+
+@Styles.Render("~/AdminLTE/plugins/daterangepicker/css")
+@Styles.Render("~/AdminLTE/plugins/icheck/css")
+@Styles.Render("~/AdminLTE/plugins/colorpicker/css")
+@Styles.Render("~/AdminLTE/plugins/timepicker/css")
+@Styles.Render("~/AdminLTE/plugins/select2/css")
+@Styles.Render("~/AdminLTE/dist/css")
+@Styles.Render("~/AdminLTE/dist/css/skins")
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+        <!--Função de carregar o CEP-->
+
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.ID_COLABORADOR)
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="height: 40px">
+                <div class="col-md-3" style="padding: 2px;border:medium">Informações do colaborador</div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-4" style="padding: 0px 10px 0px 10px">Nome Fantasia</div>
+                    <div class="col-md-4" style="padding: 0px 10px 0px 10px;">Razão social</div>
+                    <div class="col-md-4" style="padding: 0px 10px 0px 10px;">CNPJ</div>
+                    <div class="col-md-4" style="padding: 0px 10px 0px 10px">
+                        @Html.EditorFor(model => model.NOME_FANTASIA, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.NOME_FANTASIA, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-4" style="padding: 0px 10px 0px 0px">
+                        @Html.EditorFor(model => model.RAZAO_SOCIAL, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.RAZAO_SOCIAL, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-4" style="padding: 0px 10px 0px 0px">
+                        @Html.EditorFor(model => model.CPF_CNPJ, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.CPF_CNPJ, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="height: 40px">
+                <div class="col-md-3" style="padding: 2px;">Endereço</div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3" style="padding: 0px 10px 0px 10px;">CEP</div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">UF</div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 10px;">cidade</div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">Bairro</div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 10px;">
+                        @Html.EditorFor(model => model.CEP, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.CEP, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                        @Html.EditorFor(model => model.UF, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.UF, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                        @Html.EditorFor(model => model.CIDADE, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.CIDADE, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                        @Html.EditorFor(model => model.BAIRRO, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.BAIRRO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2" style="padding: 0px 10px 0px 10px;">Tipo de Logadouro</div>
+                    <div class="col-md-5" style="padding: 0px 10px 0px 10px;">Logadouro</div>
+                    <div class="col-md-2" style="padding: 0px 10px 0px 0px;">Número</div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">Complemento</div>
+                    <div class="col-md-2" style="padding: 0px 10px 0px 10px;">
+                        @Html.EditorFor(model => model.TIPO_LOGRADOURO, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.TIPO_LOGRADOURO, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-5" style="padding: 0px 10px 0px 10px;">
+                        @Html.EditorFor(model => model.LOGRADOURO, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.LOGRADOURO, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-2" style="padding: 0px 10px 0px 0px; ">
+                        @Html.EditorFor(model => model.Numero, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.Numero, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                        @Html.EditorFor(model => model.COMPLEMENTO, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        @Html.ValidationMessageFor(model => model.COMPLEMENTO, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="height: 40px">
+                <!--Labels do Contato-->
+                <div class="col-md-3" style="padding: 2px;">Contato</div>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-1" style="padding: 0px 10px 0px 10px;">DDD</div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">Telefone 1</div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">Telefone 2</div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">Email</div>
+                <div class="col-md-2" style="padding: 0px 10px 0px 0px;">Contato</div>
+                <div class="col-md-1" style="padding: 0px 10px 0px 10px;">
+                    @Html.EditorFor(model => model.DDD, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.DDD, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                    @Html.EditorFor(model => model.TEL1, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.TEL1, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                    @Html.EditorFor(model => model.TEL2, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.TEL2, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-3" style="padding: 0px 10px 0px 0px;">
+                    @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-2" style="padding: 0px 10px 0px 0px;">
+                    @Html.EditorFor(model => model.CONTATO, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.CONTATO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading" style="height: 40px">
+                <!--Labels do Contato-->
+                <div class="col-md-3" style="padding: 2px;">Outras Informações</div>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-4" style="padding: 0px 10px 0px 10px;">Especialidade</div>
+                <div class="col-md-4" style="padding: 0px 10px 0px 0px;">Origem da base(ex: Amil,OpenLine e etc...)</div>
+                <div class="col-md-4" style="padding: 0px 10px 0px 0px;">Tipo de de prestador(clinica,laboratorio e etc...)</div>
+                <!--Contato1-->
+                <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                    <div class="input-group input-group-sm">
+                        @Html.EditorFor(model => model.ESPECIALIDADE, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-info btn-flat" data-target="#CadastrarEspecialidade" data-toggle="modal">+</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4" style="padding: 0px 10px 0px 0px;">
+                    @Html.EditorFor(model => model.CLIENTE, new { htmlAttributes = new { @class = "form-control", @style = "text-transform:uppercase" } })
+                    @Html.ValidationMessageFor(model => model.CLIENTE, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-md-4" style="padding: 0px 10px 0px 0px;">
+                    <select class="form-control" name="TIPO">
+                        @if (Model.TIPO == "HOSPITAL"){<option value="HOSPITAL"selected>HOSPITAL</option>}
+                        else{<option value="HOSPITAL">HOSPITAL</option>}
+                        @if (Model.TIPO == "CLINICA"){<option value="CLINICA" selected>CLINICA</option>}
+                        else{<option value="CLINICA" selected>CLINICA</option>}
+                        @if (Model.TIPO == "POLICLINICA"){<option value="POLICLINICA" selected>POLICLINICA</option> }
+                        else{<option value="POLICLINICA">POLICLINICA</option>}
+                        @if (Model.TIPO == "CONSULTORIO"){<option value="CONSULTORIO" selected>CONSULTORIO</option>}
+                        else{<option value="CONSULTORIO">CONSULTORIO</option>}
+                        @if (Model.TIPO == "TERAPIA"){<option value="TERAPIA">TERAPIA</option> }
+                        else{<option value="TERAPIA">TERAPIA</option>}
+                        @if (Model.TIPO == "TERAPIA"){<option value="LABORATORIO"selected>LABORATORIO</option> }
+                        else{<option value="LABORATORIO">LABORATORIO</option>}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" style="Padding:0px 10px 0px 250px">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Adicionar" class="btn btn-success" />
+
+                <input type="button" value="Voltar" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "COLABORADORES")'" />
+            </div>
+        </div>
+        <div class="modal fade" id="CadastrarEspecialidade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Cadastrar Especialidade</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <h3>Especialidade</h3>
+                            <select class="form-control" id="esp">
+                                @foreach (ESPECIALIDADE_EXAMES cred in ViewBag.esp)
+                                {
+                                    <option value="@cred.NOME_ESPECIALIDADE">@cred.NOME_ESPECIALIDADE</option>
+                                }
+                            </select>
+                            <br /><br />
+                            <div class="row"><button class="btn btn-default" id="checkbtn" onclick="AddEsp();" type="button"><span class="glyphicon glyphicon-check"></span> Verificar</button></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts {
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    @Scripts.Render("~/bundles/jqueryval"))
+    @Scripts.Render("~/AdminLTE/plugins/timepicker/js")
+    @Scripts.Render("~/AdminLTE/plugins/icheck/js")
+    @Scripts.Render("~/Scripts/Forms/Advanced")
+    @Scripts.Render("~/AdminLTE/plugins/select2/js")
+    <script src="https://rawgit.com/RobinHerbots/Inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    @Scripts.Render("~/AdminLTE/plugins/momentjs/js")
+    @Scripts.Render("~/AdminLTE/plugins/daterangepicker/js")
+    @Scripts.Render("~/AdminLTE/plugins/colorpicker/js")
+
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                function limpa_formulario_cep() {
+                    // Limpa valores do formulário de cep.
+                    $("#LOGRADOURO").val("");
+                    $("#BAIRRO").val("");
+                    $("#CIDADE").val("");
+                    $("#UF").val("");
+                    $("#COMPLEMENTO").val("");
+                }
+
+                //Quando o campo cep perde o foco.
+                $("#CEP").blur(function () {
+
+                    //Nova variável "cep" somente com dígitos.
+                    var cep = $(this).val().replace(/\D/g, '');
+
+                    //Verifica se campo cep possui valor informado.
+                    if (cep != "") {
+
+                        //Expressão regular para validar o CEP.
+                        var validacep = /^[0-9]{8}$/;
+
+                        //Valida o formato do CEP.
+                        if (validacep.test(cep)) {
+
+                            //Preenche os campos com "..." enquanto consulta webservice.
+                            $("#LOGRADOURO").val("...");
+                            $("#BAIRRO").val("...");
+                            $("#CIDADE").val("...");
+                            $("#UF").val("...");
+                            $("#COMPLEMENTO").val("...");
+                            //Consulta o webservice viacep.com.br/
+                            $.getJSON("//viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+
+                                if (!("erro" in dados)) {
+                                    //Atualiza os campos com os valores da consulta.
+                                    $("#LOGRADOURO").val(dados.logradouro);
+                                    $("#BAIRRO").val(dados.bairro);
+                                    $("#CIDADE").val(dados.localidade);
+                                    $("#UF").val(dados.uf);
+                                    $("#COMPLEMENTO").val(dados.complemento);
+                                } //end if.
+                                else {
+                                    //CEP pesquisado não foi encontrado.
+                                    limpa_formulario_cep();
+                                    //alert("CEP não encontrado.");
+                                }
+                            });
+                        } //end if.
+                        else {
+                            //cep é inválido.
+                            limpa_formulario_cep();
+                            //alert("Formato de CEP inválido.");
+                        }
+                    } //end if.
+                    else {
+                        //cep sem valor, limpa formulário.
+                        limpa_formulario_cep();
+                    }
+                });
+            });
+            function AddEsp() {
+                var dropEsp = document.getElementById("esp").value;
+                dropesp = dropEsp.toString();
+                var com = document.getElementById("ESPECIALIDADE").value;
+                console.log("variavel="+ com);
+                if (com == null)
+                {
+                    var esp = document.getElementById("ESPECIALIDADE").innerText;
+                    esp = dropEsp + ";";
+                    console.log("especialidade = " + esp);
+                    document.getElementById("ESPECIALIDADE").value = esp;
+                } else
+                {
+                    
+                    esp = com + dropEsp + ";";
+                    console.log("variaveis=" + esp);
+                    console.log("ewspecialidades = " + esp);
+                    document.getElementById("ESPECIALIDADE").value = esp;
+                }
+            }
+            //MASCARAS
+            $("input[id*='CPF_CNPJ']").inputmask({
+                mask: ['999.999.999-99', '99.999.999/9999-99'],
+                keepStatic: true
+            });
+            $("input[id*='CEP']").inputmask({
+                mask: ['99999-999'],
+                keepStatic: true
+            });
+            $("input[id*='TEL1']").inputmask({
+                mask: ['9999-9999', '99999-9999'],
+                keepStatic: true
+            });
+            $("input[id*='TEL2']").inputmask({
+                mask: ['9999-9999', '99999-9999'],
+                keepStatic: true
+            });   
+    </script>
+}

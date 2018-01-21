@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Bem Vindo ao sistema de credenciamento";
+}
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Home/DashboardV1/menu")
+}
+
+@Styles.Render("~/AdminLTE/plugins/morris/css")
+@Styles.Render("~/AdminLTE/plugins/jvectormap/css")
+@Styles.Render("~/AdminLTE/plugins/datepicker/css")
+@Styles.Render("~/AdminLTE/plugins/daterangepicker/css")
+@Styles.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/css")
+
+@using (Html.BeginForm("BuscarColaborador", "COLABORADORES"))
+{
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <i class="fa fa-search"></i>&nbsp;Pesquisar Empresa
+            </h3>
+        </div>
+        <div class="box-body">
+            <div class="input-group input-group-sm">
+                <input type="text" class="form-control" name="query">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+                </span>
+            </div>
+        </div>
+        <div class="box-footer clearfix no-border"></div>
+    </div>
+}
+@if (ViewBag.CredenciamentosAtrasados > 0)
+{
+    <div class="alert alert-warning alert-dismissible">
+        <h4><i class="icon fa fa-warning"></i> Alerta!</h4>
+        Voce tem @ViewBag.CredenciamentosAtrasados Credenciamentos que faltam 2 dias para encerrar a data de retorno no sistema <a href="@Url.Action("CredenciamentosAtrasados","CREDENCIAMENTOS",null)">Clique Aqui</a>
+    </div>
+
+}
+@if (ViewBag.CredenciamentosEncerrados > 0)
+{
+    <div class="alert alert-danger alert-dismissible">
+        <h4><i class="icon fa fa-ban"></i> Alerta!</h4>
+        Voce tem @ViewBag.CredenciamentosEncerrados Credenciamentos que ja encerram a data de retorno no sistema <a href="@Url.Action("CredenciamentosEncerrados", "CREDENCIAMENTOS",null)">Clique Aqui</a>
+    </div>
+}
+<div class="row">
+    <section class="col-lg-6 connectedSortable">
+        @Html.Partial("Widgets/CredenciamentoPorProfissional")
+    </section>
+    <section class="col-lg-6 connectedSortable">
+        @Html.Partial("Widgets/CredenciamentoPorContrato")
+    </section>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+        //grafico de credenciamento por funcionario
+        function verificarGrafico() {
+            var usuarios = $('#usuarios option:selected').val();
+            var dataInicio = document.getElementById("dataInicio").value;
+            var dataFim = document.getElementById("dataFim").value;
+            var url = '@Url.Action("credenciamentosPorFuncionario", "Grafico")' + "?dataInicial=" + dataInicio + '&dataFinal=' + dataFim + "&usuarios=" + usuarios;
+            console.log("url = " + url);
+            //Verifica se campo Status possui valor informado.
+            if (url != "") {
+                //Aciona Action para obter o resultado em JSON/
+                $.getJSON(url, function (dadosOcorrencias) {
+                    //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                    $("#GraficoCredenciamentosStatus").html("");
+
+                    if (dadosOcorrencias.length > 0) {
+
+                        //Cria o novo grafico
+                        new Morris.Bar({
+                            // ID of the element in which to draw the chart.
+                            element: 'GraficoCredenciamentosStatus',
+                            // Chart data records -- each entry in this array corresponds to a point on
+                            // the chart.
+                            data: dadosOcorrencias,
+                            // The name of the data record attribute that contains x-values.
+                            xkey: 'Status',
+                            // A list of names of data record attributes that contain y-values.
+                            ykeys: ['total'],
+
+                            //Cores das barras
+                            barColors: function (row, series, type) {
+                                if (row.x % 2 == 0)
+                                    return '#3980B5';
+                                else
+                                    return '#0B62A4';
+                            },
+
+                            // Labels for the ykeys -- will be displayed when you hover over the
+                            // chart.
+                            labels: ['Total']
+                        });
+
+                    }
+                    else {
+                        $("#GraficoCredenciamentosStatus").html("<center>Dados inexistentes</center>");
+                    }//end if.
+                });
+            }
+        }
+        function verificarGraficoContrato() {
+            var dataInicio = document.getElementById("dataInicioContrato").value;
+            var dataFim = document.getElementById("dataFimContrato").value;
+            var url = '@Url.Action("CredenciamentosPorContrato", "Grafico")' + "?dataInicial=" + dataInicio + '&dataFinal=' + dataFim;
+            console.log("url = " + url);
+            //Verifica se campo Status possui valor informado.
+            if (url != "") {
+                //Aciona Action para obter o resultado em JSON/
+                $.getJSON(url, function (dadosOcorrencias) {
+                    //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                    $("#GraficoContratoStatus").html("");
+
+                    if (dadosOcorrencias.length > 0) {
+
+                        //Cria o novo grafico
+                        new Morris.Bar({
+                            // ID of the element in which to draw the chart.
+                            element: 'GraficoContratoStatus',
+                            // Chart data records -- each entry in this array corresponds to a point on
+                            // the chart.
+                            data: dadosOcorrencias,
+                            // The name of the data record attribute that contains x-values.
+                            xkey: 'Status',
+                            // A list of names of data record attributes that contain y-values.
+                            ykeys: ['total'],
+
+                            //Cores das barras
+                            barColors: function (row, series, type) {
+                                if (row.x % 2 == 0)
+                                    return '#3980B5';
+                                else
+                                    return '#0B62A4';
+                            },
+
+                            // Labels for the ykeys -- will be displayed when you hover over the
+                            // chart.
+                            labels: ['Total']
+                        });
+
+                    }
+                    else {
+                        $("#GraficoContratoStatus").html("<center>Dados inexistentes</center>");
+                    }//end if.
+                });
+            }
+        }
+    </script>
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+    @Scripts.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/js")
+    @Scripts.Render("~/AdminLTE/plugins/sparkline/js")
+    @Scripts.Render("~/AdminLTE/plugins/jvectormap/js")
+    @Scripts.Render("~/AdminLTE/plugins/daterangepicker/js")
+    @Scripts.Render("~/AdminLTE/plugins/knob/js")
+    @Scripts.Render("~/AdminLTE/plugins/raphael/js")
+    @Scripts.Render("~/AdminLTE/plugins/morris/js")
+    @Scripts.Render("~/AdminLTE/plugins/datepicker/js")
+    @Scripts.Render("~/Scripts/Home/DashboardV1")
+}

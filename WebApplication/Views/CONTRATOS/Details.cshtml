@@ -1,0 +1,183 @@
+﻿@model WebApplication.Models.CONTRATO
+@using WebApplication.Models;
+
+@{
+    ViewBag.Title =Model.NOME_CLIENTE;
+    ViewBag.SubTitle = "Meta:"+Model.META;
+}
+@section Menu {
+    @Scripts.Render("~/Scripts/Home/DashboardV1/menu")
+}
+
+@Styles.Render("~/AdminLTE/plugins/morris/css")
+@Styles.Render("~/AdminLTE/plugins/jvectormap/css")
+@Styles.Render("~/AdminLTE/plugins/datepicker/css")
+@Styles.Render("~/AdminLTE/plugins/daterangepicker/css")
+@Styles.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/css")
+@Styles.Render("~/Styles/Elements/Icons")
+
+
+<section class="col-lg-6 connectedSortable">
+    @Html.Partial("Widgets/MetasContratoPartial")
+</section>
+<section class="col-lg-6 connectedSortable">
+    @Html.Partial("Widgets/StatusCredenciamentoPartial")
+</section>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID_CONTRATO }) |
+    @Html.ActionLink("Voltar Aos contratos", "Index")
+</p>
+
+<div class="modal fade" id="ModalMETA" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Cadastrar meta</h3>
+                @using (Html.BeginForm("Create", "METAS"))
+                {
+
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <div class="form-group">
+                            <input type="hidden" name="IDCONTRATO" value="@Model.ID_CONTRATO" />
+                            <h3>Especialidade ou exame</h3>
+                            @Html.DropDownList("IDESP_EXAM", null, new { style = "width: 100%", @Class = "form-control" })
+                            <h3>META</h3>
+                            <input type="number" class="form-control" name="META" required />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-info btn-flat">Cadastrar meta</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModalAguardandoContrato" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table jput="t_template">
+                    <tbody jput="tbody_template">
+                        <tr>
+                            <td>{{Prestador}}</td>
+                            <td>{{Especialidade}}</td>
+                            <td>{{Observacao}}</td>
+                            <td><a href='@Url.Action("details","COLABORADORES")+{{IDPrestador}}'>Acesse Aqui</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+    @Scripts.Render("~/AdminLTE/plugins/knob/js")
+    @Scripts.Render("~/AdminLTE/plugins/raphael/js")
+    @Scripts.Render("~/AdminLTE/plugins/morris/js")  
+    @Scripts.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/js")
+    @Scripts.Render("~/AdminLTE/plugins/sparkline/js")
+    @Scripts.Render("~/AdminLTE/plugins/jvectormap/js")
+    @Scripts.Render("~/AdminLTE/plugins/daterangepicker/js")
+    @Scripts.Render("~/AdminLTE/plugins/datepicker/js") 
+    <script src="~/Scripts/CONTRATOS/jput-2.js"></script>
+    <script src="~/Scripts/CONTRATOS/jput-2.prod.js"></script>
+    <script src="~/Scripts/CONTRATOS/jput.min.js"></script>
+    <script type="text/javascript">
+      //Make the dashboard widgets sortable Using jquery UI
+      $(".connectedSortable").sortable({
+          placeholder: "sort-highlight",
+          connectWith: ".connectedSortable",
+          handle: ".box-header, .nav-tabs",
+          forcePlaceholderSize: true,
+          zIndex: 999999
+      });
+      $(".connectedSortable .box-header, .connectedSortable .nav-tabs-custom").css("cursor", "move");
+
+      //jQuery UI sortable for the todo list
+      $(".todo-list").sortable({
+          placeholder: "sort-highlight",
+          handle: ".handle",
+          forcePlaceholderSize: true,
+          zIndex: 999999
+      });
+
+      //bootstrap WYSIHTML5 - text editor
+      $(".textarea").wysihtml5();
+
+      //GRAFICO
+      window.onload = function verificarGrafico() {
+          var url = '@Url.Action("GraficoContratoPorStatus", "Grafico",new { idContrato=Model.ID_CONTRATO })';
+          console.log("url = " + url);
+          //Verifica se campo Status possui valor informado.
+          if (url != "") {
+              //Aciona Action para obter o resultado em JSON/
+              $.getJSON(url, function (dadosOcorrencias) {
+                  //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                  // $("#GraficoStatus").html("");
+
+                  if (dadosOcorrencias.length > 0) {
+                      console.log(dadosOcorrencias);
+                      //Cria o novo grafico
+                      new Morris.Bar({
+                          // ID of the element in which to draw the chart.
+                          element: 'GraficoStatus',
+                          // Chart data records -- each entry in this array corresponds to a point on
+                          // the chart.
+                          data: dadosOcorrencias,
+                          // The name of the data record attribute that contains x-values.
+                          xkey: 'Status',
+                          // A list of names of data record attributes that contain y-values.
+                          ykeys: ['total'],
+
+                          //Cores das barras
+                          barColors: function (row, series, type) {
+                              if (row.x % 2 == 0)
+                                  return '#3980B5';
+                              else
+                                  return '#0B62A4';
+                          },
+
+                          // Labels for the ykeys -- will be displayed when you hover over the
+                          // chart.
+                          labels: ['Total']
+                      });
+
+                  }
+                  else {
+                      $("#GraficoStatus").html("<center>Dados inexistentes</center>");
+                  }//end if.
+              });
+          }
+      }
+      function carregarPrestadores(contrato, especialidade)
+      {
+          console.log(contrato, especialidade);
+          
+          
+          var dadosContrato = '@Url.Action("AguradandoContratoPrestadores")' + "?idContrato="contrato+"&idespecialidade="+especialidade;
+         
+          if (dadosContrato != "")
+          {
+              $.getJSON(dadosContrato, function (prestadores) {
+                  $("#tbody").jPut({
+                      jsonData:prestadores,
+                      //ajax_url:"youfile.json",  if you want to call from a json file
+                      name:"tbody_template",
+                  });
+
+              });
+          }
+      }
+    </script>
+}

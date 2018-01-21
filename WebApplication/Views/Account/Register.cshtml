@@ -1,0 +1,86 @@
+﻿@model WebApplication.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebApplication</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    @Styles.Render("~/AdminLTE/bootstrap/css")
+    @Styles.Render("~/AdminLTE/plugins/font-awesome/css")
+    @Styles.Render("~/AdminLTE/plugins/ionicons/css")
+    @Styles.Render("~/AdminLTE/dist/css")
+    @Styles.Render("~/AdminLTE/plugins/icheck/css/sqare/blue")
+
+
+
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+    <div class="register-logo">
+        <a href="@Url.Action("DashboardV1", "Home")">Welcome to <b>WebApplication!</b></a>
+    </div>
+    <div class="register-box-body">
+        <p class="login-box-msg">Register a new membership</p>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new {role = "form"}))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary("", new {@class = "text-danger"})
+            <div class="form-group has-feedback">
+                Nome do Funcionario
+                @Html.TextBoxFor(m => m.NameIdentifier, new {@class = "form-control"})
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                Email
+                @Html.TextBoxFor(m => m.Email, new {@class = "form-control"})
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                Senha
+                @Html.PasswordFor(m => m.Password, new {@class = "form-control"})
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                Repita a senha
+                @Html.PasswordFor(m => m.ConfirmPassword, new {@class = "form-control"})
+                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+                Tipo de Usuario
+                @Html.EnumDropDownListFor(m => m.TIPO_LOGIN,new {@class = "form-control" ,@placeholder = "Tipo de usuario" } )
+                <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+                            <input type="checkbox"> Eu concordo com os termos termos
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                </div>
+            </div>
+        }
+        <div class="social-auth-links text-center">
+            <a href="@Url.Action("Login", "Account")" class="text-center">Ja sou cadastrado</a>
+        </div>
+    </div>
+</div>
+
+    @Scripts.Render("~/AdminLTE/plugins/jquery/js")
+    @Scripts.Render("~/AdminLTE/bootstrap/js")
+    @Scripts.Render("~/AdminLTE/plugins/icheck/js")
+    @Scripts.Render("~/AdminLTE/plugins/jquery-validate/js")
+    @Scripts.Render("~/Scripts/Account/Login")
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@using WebApplication.Models
+<div class="box box-pane">
+    <div class="box-header">
+        <i class="fa  fa-file-text-o"></i>
+        <h3 class="box-title">Informações do Credenciador</h3>
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-success btn-sm" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    @Html.DropDownList("IDCONTRATOINFO",null,"Selecione o contrato", new { style = "width: 100%", @Class = "form-control",@onchange = "jsFunction(this.value);", })
+    <div class="box-body no-padding">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Status</th>
+                      <th>Total</th>
+                  </tr>
+              </thead>
+              <tbody id="resulInformacoes">
+              </tbody>
+          </table>          
+    </div>
+    <div class="box-footer text-black">
+    </div>
+</div>

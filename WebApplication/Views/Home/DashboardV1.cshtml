@@ -1,0 +1,363 @@
+﻿@{
+    ViewBag.Title = "Bem Vindo ao sistema de credenciamento";
+}
+@using WebApplication.Models
+@section Menu {
+    @Scripts.Render("~/Scripts/Home/DashboardV1/menu")
+}
+
+@Styles.Render("~/AdminLTE/plugins/morris/css")
+@Styles.Render("~/AdminLTE/plugins/jvectormap/css")
+@Styles.Render("~/AdminLTE/plugins/datepicker/css")
+@Styles.Render("~/AdminLTE/plugins/daterangepicker/css")
+@Styles.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/css")
+
+@using (Html.BeginForm("BuscarColaborador", "COLABORADORES"))
+{
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">
+                <i class="fa fa-search"></i>&nbsp;Pesquisar Empresa
+            </h3>
+        </div>
+        <div class="box-body">
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">CIDADE</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">REGIAO</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">ESPECIALIDADE</div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2 " name="cidade" placeholder="Selecione a cidade...">
+                    <option selected="selected" value="">Selecione a cidade...</option>
+                    @foreach (string cred in ViewBag.cidade)
+                    {
+                        <option value="@cred">@cred</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2 " name="regiao" placeholder="Selecione a região...">
+                    <option selected="selected" value="">selecione a região...</option>
+                    @foreach (string cred in ViewBag.regiao)
+                    {
+
+                        <option value="@cred">@cred</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4" style="padding: 0px 10px 0px 10px;">
+                <select class="form-control select2" name="especialidade" placeholder="Selecione a especialidade...">
+                    <option selected="selected" value="">selecione a especialidade...</option>
+                    @foreach (ESPECIALIDADE_EXAMES cred in ViewBag.especialidade)
+                    {
+                        <option value="@cred.NOME_ESPECIALIDADE">@cred.NOME_ESPECIALIDADE</option>
+                    }
+                </select>
+            </div>
+            <div class="input-group input-group-sm col-md-12"style="padding: 0px 10px 0px 10px;">
+                    <input type="text" class="form-control" name="query">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-info btn-flat">Buscar</button>
+                    </span>
+                </div>
+            </div>
+        <div class="box-footer clearfix no-border"></div>
+    </div>
+}
+@if (ViewBag.CredenciamentosAtrasados > 0)
+{
+    <div class="alert alert-warning alert-dismissible">
+        <h4><i class="icon fa fa-warning"></i> Alerta!</h4>
+        Voce tem @ViewBag.CredenciamentosAtrasados Credenciamentos que faltam 2 dias para encerrar a data de retorno no sistema <a href="@Url.Action("CredenciamentosAtrasados","CREDENCIAMENTOS",null)">Clique Aqui</a>
+    </div>
+
+}
+@if (ViewBag.CredenciamentosEncerrados > 0)
+{
+    <div class="alert alert-danger alert-dismissible">
+        <h4><i class="icon fa fa-ban"></i> Alerta!</h4>
+        Voce tem @ViewBag.CredenciamentosEncerrados Credenciamentos que ja encerram a data de retorno no sistema <a href="@Url.Action("CredenciamentosEncerrados", "CREDENCIAMENTOS",null)">Clique Aqui</a>
+    </div>
+}
+<div class="row">
+    <section class="col-lg-6 connectedSortable">
+        @*@Html.Partial("Widgets/CredenciamentoPorProfissional")*@
+        @Html.Partial("Widgets/MetasPorContrato")
+        @Html.Partial("Widgets/InformacoesCredenciado")
+        
+    </section>
+    <section class="col-lg-6 connectedSortable">
+        @*@Html.Partial("Widgets/CredenciamentoPorContrato")*@
+        @Html.Partial("Widgets/PropostasCredenciamento")
+        @Html.Partial("Widgets/UltimosContatos")
+       
+    </section>
+</div>
+<div class="col-lg-12">
+    @*@Html.Partial("Widgets/CredenciamentoPorRegiao")*@
+    @Html.Partial("Widgets/Credenciamentos")
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+        //grafico de credenciamento por funcionario
+        function verificarGrafico() {
+            var usuarios = $('#usuarios option:selected').val();
+            var dataInicio = document.getElementById("dataInicio").value;
+            var dataFim = document.getElementById("dataFim").value;
+            var url = '@Url.Action("credenciam-entosPorFuncionario", "Grafico")' + "?dataInicial=" + dataInicio + '&dataFinal=' + dataFim + "&usuarios=" + usuarios;
+            console.log("url = " + url);
+            //Verifica se campo Status possui valor informado.
+            if (url != "") {
+                //Aciona Action para obter o resultado em JSON/
+                $.getJSON(url, function (dadosOcorrencias) {
+                    //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                    $("#GraficoCredenciamentosStatus").html("");
+
+                    if (dadosOcorrencias.length > 0) {
+
+                        //Cria o novo grafico
+                        new Morris.Bar({
+                            // ID of the element in which to draw the chart.
+                            element: 'GraficoCredenciamentosStatus',
+                            // Chart data records -- each entry in this array corresponds to a point on
+                            // the chart.
+                            data: dadosOcorrencias,
+                            // The name of the data record attribute that contains x-values.
+                            xkey: 'Status',
+                            // A list of names of data record attributes that contain y-values.
+                            ykeys: ['total'],
+
+                            //Cores das barras
+                            barColors: function (row, series, type) {
+                                if (row.x % 2 == 0)
+                                    return '#3980B5';
+                                else
+                                    return '#0B62A4';
+                            },
+
+                            // Labels for the ykeys -- will be displayed when you hover over the
+                            // chart.
+                            labels: ['Total']
+                        });
+
+                    }
+                    else {
+                        $("#GraficoCredenciamentosStatus").html("<center>Dados inexistentes</center>");
+                    }//end if.
+                });
+            }
+        }
+        function verificarGraficoContrato() {
+            var dataInicio = document.getElementById("dataInicioContrato").value;
+            var dataFim = document.getElementById("dataFimContrato").value;
+            var url = '@Url.Action("CredenciamentosPorContrato", "Grafico")' + "?dataInicial=" + dataInicio + '&dataFinal=' + dataFim;
+            console.log("url = " + url);
+            //Verifica se campo Status possui valor informado.
+            if (url != "") {
+                //Aciona Action para obter o resultado em JSON/
+                $.getJSON(url, function (dadosOcorrencias) {
+                    //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                    $("#GraficoContratoStatus").html("");
+
+                    if (dadosOcorrencias.length > 0) {
+
+                        //Cria o novo grafico
+                        new Morris.Bar({
+                            // ID of the element in which to draw the chart.
+                            element: 'GraficoContratoStatus',
+                            // Chart data records -- each entry in this array corresponds to a point on
+                            // the chart.
+                            data: dadosOcorrencias,
+                            // The name of the data record attribute that contains x-values.
+                            xkey: 'Status',
+                            // A list of names of data record attributes that contain y-values.
+                            ykeys: ['total'],
+
+                            //Cores das barras
+                            barColors: function (row, series, type) {
+                                if (row.x % 2 == 0)
+                                    return '#3980B5';
+                                else
+                                    return '#0B62A4';
+                            },
+
+                            // Labels for the ykeys -- will be displayed when you hover over the
+                            // chart.
+                            labels: ['Total']
+                        });
+
+                    }
+                    else {
+                        $("#GraficoContratoStatus").html("<center>Dados inexistentes</center>");
+                    }//end if.
+                });
+            }
+        } function verificarGraficoregiao() {
+            var contrato = document.getElementById("IDCONTRATO").value;
+            var url = '@Url.Action("CredenciamentoPorRegiao", "Grafico")' + "?IDCONTRATO=" + contrato;
+            console.log("url = " + url);
+            //Verifica se campo Status possui valor informado.
+            if (url != "") {
+                //Aciona Action para obter o resultado em JSON/
+                $.getJSON(url, function (dadosOcorrencias) {
+                    //limpa conteudo da div myfirstchart que continha o grafico anterior...
+                    $("#GraficoCredenciamentosRegiao").html("");
+
+                    if (dadosOcorrencias.length > 0) {
+
+                        //Cria o novo grafico
+                        new Morris.Bar({
+                            // ID of the element in which to draw the chart.
+                            element: 'GraficoCredenciamentosRegiao',
+                            // Chart data records -- each entry in this array corresponds to a point on
+                            // the chart.
+                            data: dadosOcorrencias,
+                            // The name of the data record attribute that contains x-values.
+                            xkey: 'regiao',
+                            // A list of names of data record attributes that contain y-values.
+                            ykeys: ['total'],
+
+                            //Cores das barras
+                            barColors: function (row, series, type) {
+                                if (row.x % 2 == 0)
+                                    return '#3980B5';
+                                else
+                                    return '#0B62A4';
+                            },
+
+                            // Labels for the ykeys -- will be displayed when you hover over the
+                            // chart.
+                            labels: ['Total']
+                        });
+
+                    }
+                    else {
+                        $("#GraficoCredenciamentosRegiao").html("<center>Dados inexistentes</center>");
+                    }//end if.
+                });
+            }
+        }
+        function jsFunction(value){
+            $('#resulInformacoes').empty(); //Limpando a tabela
+            var contrato = document.getElementById("IDCONTRATOINFO").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("InfoCredenciamentos","CREDENCIAMENTOS")' + "?IDCONTRATO=" + contrato,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#resulInformacoes').append('<tr><td>' + dados[i].Status + '</td><td>' + dados[i].total+'</td></tr>');
+                    }
+                }
+            });
+        }
+        function credenciamentoslancados(value) {
+            $('#resulCredenciamentos').empty(); //Limpando a tabela
+            var contrato = document.getElementById("IDCONTRATOLANC").value;
+            var status = document.getElementById("status").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("credenciamentoslancados", "CREDENCIAMENTOS")' + "?IDCONTRATO=" + contrato+"&status="+status,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#resulCredenciamentos').append('<tr><td>' + dados[i].NOME_FANTASIA + '</td><td>' + dados[i].ESPECIALIDADE + '</td><td>' + dados[i].TELEFONE + '</td><td>' + dados[i].CONTATO + '</td><td>' + '<a href='+'@Url.Action("Details","COLABORADORES")' + '?id=' + dados[i].IDPRESTADOR+'>CLIQUE AQUI</a></td><tr>');
+                    }
+                }
+            });
+        }
+        function ProposCredenciamentosEsp(value) {
+            $("#selecEspecialidade option").remove(); // Remove all <option> child tags.
+            var contrato = document.getElementById("IDCONTRATOPROPOR").value;
+            var status = document.getElementById("status").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("ProposCredenciamentosEsp", "METAS")' + "?IDCONTRATO=" + contrato ,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#selecEspecialidade').append('<option value="'+dados[i].NOME_ESPECIALIDADE+'">'+dados[i].NOME_ESPECIALIDADE+"</option>")
+                    }
+                }
+            });
+        }
+        function ProposCredenciamentosRegiao(value) {
+            $("#selecRegiao option").remove(); // Remove all <option> child tags.
+            var especialidade = document.getElementById("selecEspecialidade").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("ProposCredenciamentosRegiao", "COLABORADORES")' +"?ESPECIALIDADE="+especialidade,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#selecRegiao').append('<option value="' + dados[i].REGIAO + '">' + dados[i].REGIAO + "</option>")
+                    }
+                    $('#selecRegiao').append('<option value=Selecione>SELECIONE UMA REGIAO...</option>')
+                    $('#selecRegiao').append('<option value=TODOS>TODOS</option>')
+                }
+            });
+        }
+        function ProporCredTabela(value) {
+            $('#resultProporCred').empty(); //Limpando a tabela
+            var especialidade = document.getElementById("selecEspecialidade").value;
+            var regiao = document.getElementById("selecRegiao").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("ProporCredTabela", "COLABORADORES")' + "?ESPECIALIDADE=" + especialidade + "&REGIAO=" + regiao,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#resultProporCred').append('<tr><td>' + dados[i].NOME_FANTASIA + '</td><td>' + dados[i].TELEFONE + '</td><td>' + dados[i].CONTATO + '</td><td>' + '<a href=' + '@Url.Action("Details","COLABORADORES")' + '?id=' + dados[i].IDPRESTADOR + '>CLIQUE AQUI</a></td><tr>');
+                    }
+                }
+            });
+        }
+        function MetasPorContrato(value) {
+            $('#metasContrato').empty(); //Limpando a tabela
+            var contrato = document.getElementById("IDCONTRATOMETAS").value;
+            var tipoMetas = document.getElementById("selectTipoMetas").value;
+            $.ajax({
+                type: 'post',		//Definimos o método HTTP usado
+                dataType: 'json',	//Definimos o tipo de retorno
+                url: '@Url.Action("MetasPorContrato", "METAS")' + "?IDCONTRATO=" + contrato + "&TIPOMETA=" +tipoMetas ,//Definindo o arquivo onde serão buscados os dados
+                success: function (dados) {
+                    for (var i = 0; dados.length > i; i++) {
+                        //Adicionando registros retornados na tabela
+                        $('#metasContrato').append('<tr><td>' + dados[i].NOME_ESPECIALIDADE + '</td><td>' + dados[i].META + '</td><td>' + dados[i].CONCLUIDO + '</td><td>' + '<p style="color:deepskyblue"data-target="#ModalPrestAguar" data-toggle="modal">' + '<a href="javascript:CarregarTabelaAguardandoContrato(' + dados[i].IDCONTRATO +','+ dados[i].IDESPECIALIDADE + ');">DETALHES</a></p></td><tr>');
+                    }
+                }
+            });
+        }
+        function CarregarTabelaAguardandoContrato(contrato,especialidade)
+        {
+            $('#prestAguarCont').empty();
+            $.ajax({
+                type:'post',
+                dataType:'json',
+                url:'@Url.Action("preencherPrestAguar","CREDENCIAMENTOS")'+"?IDCONTRATO="+contrato+'&ESPECIALIDADE='+especialidade,
+                success:function(dados){
+                    for(var i = 0;dados.length >i;i++){
+                        $('#prestAguarCont').append('<tr><td>' + dados[i].PRESTADOR + '</td><td>' + dados[i].ESPECIALIDADE + '</td><td>' + dados[i].TELEFONE + '</td><td>' + dados[i].CONTATO + '</td><td>' + '<a href=' + '@Url.Action("Details","COLABORADORES")' + '?id=' + dados[i].IDPRESTADOR + '>DETALHES</a></td><tr>');
+                    }
+                }
+            });
+        }
+    </script>
+    @Scripts.Render("~/AdminLTE/plugins/jquery-ui/js")
+    @Scripts.Render("~/AdminLTE/plugins/bootstrap-wysihtml5/js")
+    @Scripts.Render("~/AdminLTE/plugins/sparkline/js")
+    @Scripts.Render("~/AdminLTE/plugins/jvectormap/js")
+    @Scripts.Render("~/AdminLTE/plugins/daterangepicker/js")
+    @Scripts.Render("~/AdminLTE/plugins/knob/js")
+    @Scripts.Render("~/AdminLTE/plugins/raphael/js")
+    @Scripts.Render("~/AdminLTE/plugins/morris/js")
+    @Scripts.Render("~/AdminLTE/plugins/datepicker/js")
+    @Scripts.Render("~/Scripts/Home/DashboardV1")
+}

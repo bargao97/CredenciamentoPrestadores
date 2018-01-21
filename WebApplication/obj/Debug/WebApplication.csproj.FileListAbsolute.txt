@@ -1,0 +1,368 @@
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\csc.exe
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\vbc.exe
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\WebApplication.dll.config
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\WebApplication.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\WebApplication.pdb
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\EntityFramework.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Newtonsoft.Json.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Owin.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Helpers.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Mvc.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Optimization.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Razor.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\WebGrease.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Helpers.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Mvc.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Optimization.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.Razor.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Newtonsoft.Json.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\EntityFramework.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Gabriel\Desktop\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Desktop\C#\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\Gabriel\Desktop\C#\WebApplication\obj\Debug\WebApplication.pdb
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\csc.exe
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\vbc.exe
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\WebApplication.dll.config
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\WebApplication.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\WebApplication.pdb
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Antlr3.Runtime.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\EntityFramework.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Newtonsoft.Json.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Owin.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Helpers.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Mvc.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Optimization.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Razor.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\WebGrease.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Helpers.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Mvc.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Optimization.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.Razor.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Antlr3.Runtime.pdb
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Newtonsoft.Json.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\EntityFramework.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\obj\Debug\WebApplication.dll
+G:\Backup COmputador\Area de Trabalho\C#\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\csc.exe
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\vbc.exe
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\gabri\Desktop\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\gabri\Desktop\C#\WebApplication\bin\WebApplication.dll.config
+C:\Users\gabri\Desktop\C#\WebApplication\bin\WebApplication.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\WebApplication.pdb
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\EntityFramework.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Newtonsoft.Json.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Owin.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Helpers.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Mvc.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Optimization.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Razor.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\WebGrease.dll
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Helpers.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Mvc.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Optimization.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.Razor.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Newtonsoft.Json.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\EntityFramework.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\gabri\Desktop\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\gabri\Desktop\C#\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\gabri\Desktop\C#\WebApplication\obj\Debug\WebApplication.pdb
+C:\Users\gabri\Desktop\C#\WebApplication\obj\Debug\WebApplication.Migrations.bancoCorrigido.resources
+C:\Users\gabri\Desktop\C#\WebApplication\obj\Debug\WebApplication.csproj.GenerateResource.Cache
+C:\Users\gabri\Desktop\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\csc.exe
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\vbc.exe
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\WebApplication.dll.config
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\WebApplication.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\WebApplication.pdb
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Antlr3.Runtime.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\EntityFramework.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\GridMvc.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Newtonsoft.Json.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Owin.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Helpers.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Mvc.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Optimization.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Razor.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\WebGrease.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\obj\Debug\WebApplication.dll
+C:\MHZ projetos\MHZCredenciamento\WebApplication\obj\Debug\WebApplication.pdb
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Helpers.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Mvc.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Optimization.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.Razor.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Antlr3.Runtime.pdb
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Newtonsoft.Json.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\EntityFramework.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\MHZ projetos\MHZCredenciamento\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\MHZ projetos\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.dll.licenses
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Logging.dll
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Tokens.dll
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Logging.xml
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Tokens.xml
+C:\MHZ projetos\mhzCredenciamento\WebApplication\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\MHZ projetos\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.Migrations.Atualizado18102017.resources
+C:\MHZ projetos\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.csproj.GenerateResource.Cache
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\csc.exe
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\vbc.exe
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\WebApplication.dll.config
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\WebApplication.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\WebApplication.pdb
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\EntityFramework.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\GridMvc.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Newtonsoft.Json.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Owin.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Helpers.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Mvc.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Optimization.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Razor.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\WebGrease.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Newtonsoft.Json.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Helpers.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Mvc.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Optimization.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.Razor.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\EntityFramework.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.Migrations.Atualizado18102017.resources
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.csproj.GenerateResource.Cache
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.dll.licenses
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\gabri\OneDrive\Documentos\Visual Studio 2015\Projects\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.pdb
+C:\MHZ projetos\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\MHZ projetos\mhzCredenciamento\WebApplication\obj\Debug\WebApplication.Migrations.criacaoVlaoresTabelaCredenciamento.resources

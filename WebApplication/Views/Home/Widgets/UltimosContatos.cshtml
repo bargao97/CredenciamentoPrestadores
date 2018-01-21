@@ -1,0 +1,39 @@
+﻿@using WebApplication.Models
+<div class="box box-pane">
+    <div class="box-header">
+        <i class="fa  fa-file-text-o"></i>
+        <h3 class="box-title">Ultimos Credenciamentos em Andamento</h3>
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-success btn-sm" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="box-body no-padding">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Empresa</th>
+                      <th>Data</th>
+                      <th>status</th>
+                  </tr>
+              </thead>
+              <tbody>
+              
+              @foreach (CREDENCIAMENTOS cred in ViewBag.carregaUltimosContatos)
+              {
+                  ApplicationDbContext db = new ApplicationDbContext();
+                  var prestadores = db.COLABORADORES.Where(s => s.ID_COLABORADOR == cred.IDCOLABORADOR).FirstOrDefault();
+                  DateTime data = new DateTime(cred.DATA_CADASTRO.Year, cred.DATA_CADASTRO.Month, cred.DATA_CADASTRO.Day);
+                <tr>
+                    <td><a href="@Url.Action("details","COLABORADORES",new { id=cred.IDCOLABORADOR})">@prestadores.NOME_FANTASIA</a></td>
+                    <td>@cred.PREVISAO.Date</td>
+                    <td>@cred.STATUS</td>
+                </tr>
+              }
+              </tbody>
+          </table>          
+    </div>
+    <div class="box-footer text-black">
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebApplication.Models.ESPECIALIDADE_EXAMES>
+
+@{
+    ViewBag.Title = "Especialidades e exames";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOME_ESPECIALIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TIPO_EXAM_ESP)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOME_ESPECIALIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_EXAM_ESP)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_ESPECIALIDADE }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_ESPECIALIDADE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_ESPECIALIDADE })
+        </td>
+    </tr>
+}
+
+</table>

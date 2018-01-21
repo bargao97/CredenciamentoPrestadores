@@ -1,0 +1,33 @@
+﻿<div class="box box-pane">
+    <div class="box-header">
+        <i class="fa  fa-file-text-o"></i>
+        <h3 class="box-title">Propostas de credenciamento</h3>
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-success btn-sm" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="box-body no-padding">
+        @Html.DropDownList("IDCONTRATOPROPOR", null, "Selecione o contrato", new { style = "width: 100%", @Class = "form-control", @onchange = "ProposCredenciamentosEsp(this.value);" })
+        <select id="selecEspecialidade"name="selecEspecialidade"onchange = "ProposCredenciamentosRegiao(this.value);"></select> 
+        <select id="selecRegiao" name="selecRegiao"onchange = "ProporCredTabela(this.value);" ></select>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Prestador</th>
+                        <th>Telefone</th>
+                        <th>Contato</th>
+                        <th>Acesso</th>
+                    </tr>
+                </thead>
+                <tbody id="resultProporCred"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="box-footer text-black">
+        <div class="row">
+        </div>
+    </div>
+</div>

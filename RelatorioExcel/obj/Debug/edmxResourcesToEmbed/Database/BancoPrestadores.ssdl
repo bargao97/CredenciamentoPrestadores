@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MHZPRESTADORESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="NameIdentifier" Type="nvarchar(max)" />
+    <Property Name="TIPO_LOGIN" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COLABORADORES">
+    <Key>
+      <PropertyRef Name="ID_COLABORADOR" />
+    </Key>
+    <Property Name="ID_COLABORADOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_FANTASIA" Type="nvarchar(max)" />
+    <Property Name="RAZAO_SOCIAL" Type="nvarchar(max)" />
+    <Property Name="CPF_CNPJ" Type="nvarchar" MaxLength="150" />
+    <Property Name="DDD" Type="nvarchar" MaxLength="3" />
+    <Property Name="TEL1" Type="nvarchar" MaxLength="20" />
+    <Property Name="TEL2" Type="nvarchar" MaxLength="20" />
+    <Property Name="ESTADO" Type="nvarchar" MaxLength="100" />
+    <Property Name="UF" Type="nvarchar" MaxLength="100" />
+    <Property Name="CIDADE" Type="nvarchar" MaxLength="100" />
+    <Property Name="CEP" Type="nvarchar" MaxLength="11" />
+    <Property Name="TIPO_LOGRADOURO" Type="nvarchar" MaxLength="150" />
+    <Property Name="LOGRADOURO" Type="nvarchar" MaxLength="150" />
+    <Property Name="Numero" Type="nvarchar" MaxLength="10" />
+    <Property Name="COMPLEMENTO" Type="nvarchar" MaxLength="100" />
+    <Property Name="BAIRRO" Type="nvarchar" MaxLength="100" />
+    <Property Name="ESPECIALIDADE" Type="nvarchar(max)" />
+    <Property Name="CLIENTE" Type="nvarchar" MaxLength="100" />
+    <Property Name="TIPO" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="CONTATO" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CONTRATOes">
+    <Key>
+      <PropertyRef Name="ID_CONTRATO" />
+    </Key>
+    <Property Name="ID_CONTRATO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_CLIENTE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="META" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CREDENCIAMENTOS">
+    <Key>
+      <PropertyRef Name="ID_CREDENCIAMENTOS" />
+    </Key>
+    <Property Name="ID_CREDENCIAMENTOS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STATUS" Type="int" Nullable="false" />
+    <Property Name="PREVISAO" Type="date" Nullable="false" />
+    <Property Name="DATA_CADASTRO" Type="date" Nullable="false" />
+    <Property Name="FUNCIONARIO" Type="nvarchar(max)" />
+    <Property Name="OBSERVACAO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IDCOLABORADOR" Type="int" Nullable="false" />
+    <Property Name="IDESP_EXAM" Type="int" Nullable="false" />
+    <Property Name="IDCONTRATO" Type="int" Nullable="false" />
+    <Property Name="NOME_ESPECIA" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ESPECIALIDADE_EXAMES">
+    <Key>
+      <PropertyRef Name="ID_ESPECIALIDADE" />
+    </Key>
+    <Property Name="ID_ESPECIALIDADE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOME_ESPECIALIDADE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TIPO_EXAM_ESP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="METAS">
+    <Key>
+      <PropertyRef Name="ID_META" />
+    </Key>
+    <Property Name="ID_META" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="META" Type="int" Nullable="false" />
+    <Property Name="IDESP_EXAM" Type="int" Nullable="false" />
+    <Property Name="NOME_ESPECIALIDADE" Type="nvarchar(max)" />
+    <Property Name="IDCONTRATO" Type="int" Nullable="false" />
+    <Property Name="CONCLUIDO" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CREDENCIAMENTOS_dbo_COLABORADORES_IDCOLABORADOR">
+    <End Role="COLABORADORES" Type="Self.COLABORADORES" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CREDENCIAMENTOS" Type="Self.CREDENCIAMENTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COLABORADORES">
+        <PropertyRef Name="ID_COLABORADOR" />
+      </Principal>
+      <Dependent Role="CREDENCIAMENTOS">
+        <PropertyRef Name="IDCOLABORADOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CREDENCIAMENTOS_dbo_CONTRATOes_IDCONTRATO">
+    <End Role="CONTRATOes" Type="Self.CONTRATOes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CREDENCIAMENTOS" Type="Self.CREDENCIAMENTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRATOes">
+        <PropertyRef Name="ID_CONTRATO" />
+      </Principal>
+      <Dependent Role="CREDENCIAMENTOS">
+        <PropertyRef Name="IDCONTRATO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_CREDENCIAMENTOS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM">
+    <End Role="ESPECIALIDADE_EXAMES" Type="Self.ESPECIALIDADE_EXAMES" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CREDENCIAMENTOS" Type="Self.CREDENCIAMENTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPECIALIDADE_EXAMES">
+        <PropertyRef Name="ID_ESPECIALIDADE" />
+      </Principal>
+      <Dependent Role="CREDENCIAMENTOS">
+        <PropertyRef Name="IDESP_EXAM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_METAS_dbo_CONTRATOes_IDCONTRATO">
+    <End Role="CONTRATOes" Type="Self.CONTRATOes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="METAS" Type="Self.METAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONTRATOes">
+        <PropertyRef Name="ID_CONTRATO" />
+      </Principal>
+      <Dependent Role="METAS">
+        <PropertyRef Name="IDCONTRATO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_METAS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM">
+    <End Role="ESPECIALIDADE_EXAMES" Type="Self.ESPECIALIDADE_EXAMES" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="METAS" Type="Self.METAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESPECIALIDADE_EXAMES">
+        <PropertyRef Name="ID_ESPECIALIDADE" />
+      </Principal>
+      <Dependent Role="METAS">
+        <PropertyRef Name="IDESP_EXAM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MHZPRESTADORESModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COLABORADORES" EntityType="Self.COLABORADORES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTRATOes" EntityType="Self.CONTRATOes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CREDENCIAMENTOS" EntityType="Self.CREDENCIAMENTOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESPECIALIDADE_EXAMES" EntityType="Self.ESPECIALIDADE_EXAMES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="METAS" EntityType="Self.METAS" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CREDENCIAMENTOS_dbo_COLABORADORES_IDCOLABORADOR" Association="Self.FK_dbo_CREDENCIAMENTOS_dbo_COLABORADORES_IDCOLABORADOR">
+      <End Role="COLABORADORES" EntitySet="COLABORADORES" />
+      <End Role="CREDENCIAMENTOS" EntitySet="CREDENCIAMENTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CREDENCIAMENTOS_dbo_CONTRATOes_IDCONTRATO" Association="Self.FK_dbo_CREDENCIAMENTOS_dbo_CONTRATOes_IDCONTRATO">
+      <End Role="CONTRATOes" EntitySet="CONTRATOes" />
+      <End Role="CREDENCIAMENTOS" EntitySet="CREDENCIAMENTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_CREDENCIAMENTOS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM" Association="Self.FK_dbo_CREDENCIAMENTOS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM">
+      <End Role="ESPECIALIDADE_EXAMES" EntitySet="ESPECIALIDADE_EXAMES" />
+      <End Role="CREDENCIAMENTOS" EntitySet="CREDENCIAMENTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_METAS_dbo_CONTRATOes_IDCONTRATO" Association="Self.FK_dbo_METAS_dbo_CONTRATOes_IDCONTRATO">
+      <End Role="CONTRATOes" EntitySet="CONTRATOes" />
+      <End Role="METAS" EntitySet="METAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_METAS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM" Association="Self.FK_dbo_METAS_dbo_ESPECIALIDADE_EXAMES_IDESP_EXAM">
+      <End Role="ESPECIALIDADE_EXAMES" EntitySet="ESPECIALIDADE_EXAMES" />
+      <End Role="METAS" EntitySet="METAS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

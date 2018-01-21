@@ -1,0 +1,43 @@
+﻿@using WebApplication.Models
+<div class="box box-pane">
+    <div class="box-header">
+        <i class="fa  fa-file-text-o"></i>
+        <h3 class="box-title">Credenciamentos Efetuados</h3>
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-success btn-sm" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    @Html.DropDownList("IDCONTRATOLANC", null,"Selecione o contrato", new { style = "width: 100%", @Class = "form-control", })
+    <select class="form-control"id="status"onchange = "credenciamentoslancados(this.value);">
+        <option selected="selected">selecione um status...</option>
+        <option value="7">PROSPECT</option>
+        <option value="1">PROPOSTA ENVIADA</option>
+        <option value="8">DOCUMENTOS RECEBIDOS COM PENDENCIA</option>
+        <option value="9">DOCUMENTO RECEBIDO</option>
+        <option value="6">CONTRATO ENVIADO</option>
+        <option value="4">CONTRATO ELETRONICO RECEBIDO</option>
+        <option value="5">CONTRATO FISICO RECEBIDO</option>
+        <option value="2">CONCLUIDO</option>
+        <option value="3">CANCELADO</option>
+    </select>
+    <div class="box-body no-padding">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Prestador</th>
+                        <th>Especialidade</th>
+                        <th>Telefone</th>
+                        <th>Contato</th>
+                        <th>Acesso</th>
+                    </tr>
+                </thead>
+                <tbody id="resulCredenciamentos"></tbody>
+            </table>          
+        </div>
+    </div>
+    <div class="box-footer text-black">
+    </div>
+</div>

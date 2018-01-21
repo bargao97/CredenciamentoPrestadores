@@ -1,0 +1,9 @@
+﻿@model IEnumerable<WebApplication.Models.CREDENCIAMENTOS>
+@using GridMvc.Html;
+
+@Html.Grid(Model).AutoGenerateColumns().Columns(Columns =>
+{
+Columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(d => d.COLABORADORES.NOME_FANTASIA);
+Columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(d => @<b>@Html.ActionLink("Detalhes", "Details", "COLABORADORES", new { id = d.IDCOLABORADOR }, null)</b>);
+    }).Filterable(true)
+

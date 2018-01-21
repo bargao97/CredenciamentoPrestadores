@@ -1,0 +1,31 @@
+﻿@model IEnumerable<RRSoft.Interno.Vendas.Web.Models.Empresas>
+@using RRSoft.Interno.Vendas.Web.Models    
+        @{
+            foreach (Empresas emp in Model)
+            {
+                <div class="box">
+                    <div class="box-body">
+                        <span class="label label-info pull-right">@emp.DataUltimaOcorrencia.ToString("dd/MM/yyyy")</span>
+                        <a href="@Url.Action("Details", "Empresas", new {id = emp.EmpresaID })">@emp.NomeFantasia</a><br />
+                        @if( emp.Contato1!=null  || emp.Contato1Telefone!=null )
+                        {
+                           @String.Format("{0}  {1}", emp.Contato1, emp.Contato1Telefone);
+                        }
+                        <br />
+                        @if (!String.IsNullOrEmpty(emp.Endereco))
+                        {
+                           @String.Format("{0} , {1} -{2} ", emp.Endereco, emp.Numero, emp.Bairro);
+                        }
+                        <p class="pull-right"><small>@emp.Status</small></p>
+                        <br />
+                        <small>@emp.Ramo.Descricao</small>
+                    </div>
+                </div>
+                @*@Html.DisplayFor(m => emp.RazaoSocial)
+                
+                if (!String.IsNullOrEmpty(emp.Bairro))
+                {
+                    <small>(@emp.Bairro)</small>
+                }*@
+            }
+        }

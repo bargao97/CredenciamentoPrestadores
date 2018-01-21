@@ -1,0 +1,151 @@
+﻿@model WebApplication.Models.COLABORADORES
+@using WebApplication.Models;
+
+@{
+    ViewBag.Title = Model.NOME_FANTASIA;
+    ViewBag.SubTitle = "Codigo da Colaborador:" + Html.DisplayFor(model => model.ID_COLABORADOR);
+}
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Forms/Advanced/menu")
+    @Scripts.Render("~/Scripts/Forms/General/menu")
+}
+@Styles.Render("~/AdminLTE/plugins/daterangepicker/css")
+@Styles.Render("~/AdminLTE/plugins/icheck/css")
+@Styles.Render("~/AdminLTE/plugins/colorpicker/css")
+@Styles.Render("~/AdminLTE/plugins/timepicker/css")
+@Styles.Render("~/AdminLTE/plugins/select2/css")
+@Styles.Render("~/AdminLTE/dist/css")
+@Styles.Render("~/AdminLTE/dist/css/skins")
+
+<div class="nav-tabs-custom">
+    <div class="tab-content">
+        <h2>
+            <i class="pull-left fa fa-hospital-o"></i> @Html.DisplayFor(model => model.NOME_FANTASIA) &nbsp;&nbsp;<small class="pull-right"><small>@*@Html.DisplayFor(model => model.wDATA_CADASTRO)*@</small></small><small class="pull-right"><small>Último Contato:</small></small>
+        </h2>
+        @Html.DisplayFor(model => model.CPF_CNPJ)<br />
+
+        <div class="active tab-pane">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="row invoice-info">
+                        <div class="col-sm-6 invoice-col">
+                            <address>
+                                CEP: @Html.DisplayFor(model => model.CEP)<br />
+                                ESTADO: @Html.DisplayFor(model => model.ESTADO)<br />
+                                CIDADE: @Html.DisplayFor(model => model.CIDADE)<br />
+                                TIPO DE LOGRADOURO: @Html.DisplayFor(model => model.TIPO_LOGRADOURO)<br />
+                                LOGRADOUROL: @Html.DisplayFor(model => model.LOGRADOURO)<br />
+                                BAIRRO: @Html.DisplayFor(model => model.BAIRRO)<br />
+                                COMPLEMENTO: @Html.DisplayFor(model => model.COMPLEMENTO)<br />
+                                NUMERO:@Html.DisplayFor(model => model.Numero)<br />
+                            </address>
+                        </div>
+                        <div class="col-sm-6 invoice-col">
+                            <address>
+                                EMAIL: @Html.DisplayFor(model => model.EMAIL)<br />
+                                CLIENTE: @Html.DisplayFor(model => model.CLIENTE)<br />
+                                DDD: @Html.DisplayFor(model => model.DDD)<br />
+                                TEL1: @Html.DisplayFor(model => model.TEL1)<br />
+                                TEL2: @Html.DisplayFor(model => model.TEL2)<br />
+                                TIPO DE COLABORADOR: @Html.DisplayFor(model => model.TIPO)<br />
+                                CLIENTE: @Html.DisplayFor(model => model.CLIENTE)<br />
+                                ESPECIALIDADE:@Html.DisplayFor(model => model.ESPECIALIDADE)<br />
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box box-info direct-chat direct-chat-warning">
+    <div class="box-header with-border">
+        <h3 class="box-title" id="tituloGridRetornos">CREDENCIAMENTOS</h3>
+        <div class="box-tools pull-right">
+
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+                Ações
+            </button>
+            <ul class="dropdown-menu" role="menu">
+
+                <li data-target="#ModalCREDENCIAMENTOS" data-toggle="modal"><a href="#">CADASTRAR CREDENCIAMENTOS</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <!-- Conversations are loaded here -->
+        <div class="direct-chat-messages">
+
+            @foreach (CREDENCIAMENTOS item in ViewBag.CREDENCIAMENTOS)
+            {
+                <div class="box box-solid box-primary">
+                    <div class="box-header">
+                    </div>
+                    <div class="box-body">
+                        &nbsp;&nbsp;<h2><small>@Html.DisplayFor(modelItem => item.DATA_CADASTRO)</small></h2> &nbsp;&nbsp;<p>Registrado por:<b>@Html.DisplayFor(modelItem => item.FUNCIONARIO)</b></p>
+                        &nbsp;&nbsp;<p>Tipo de ocorrencias: @Html.DisplayFor(modelItem => item.ESPECIALIDADE_EXAMES.NOME_ESPECIALIDADE)</p>
+                        &nbsp;&nbsp;<p>Status: @Html.DisplayFor(modelItem => item.STATUS)</p>
+                        &nbsp; &nbsp;@if (item.STATUS != STATUS_CREDENCIAMENTOS.CANCELADO || item.STATUS != STATUS_CREDENCIAMENTOS.CONCLUIDO)
+                        {
+                            <p><a href="@Url.Action("Edit","CREDENCIAMENTOS",new { id = item.ID_CREDENCIAMENTOS})"> Editar</a></p>
+                        }
+                        <hr />
+                        &nbsp;&nbsp;@Html.DisplayFor(modelItem => item.OBSERVACAO)
+                    </div>
+                    <div class="box-footer"></div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- /.box-body -->
+    <div class="box-footer">
+    </div>
+    <!-- /.box-footer-->
+</div>
+<div class="modal fade" id="ModalCREDENCIAMENTOS" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>Cadastrar Credenciamento</h3>
+                @using (Html.BeginForm("Create", "CREDENCIAMENTOS", new { id_colaborador = Model.ID_COLABORADOR }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        CONTRATO
+                        @Html.DropDownList("IDCONTRATO", null, new { style = "width: 100%", @Class = "form-control" })
+                            ESPECIALIDADDE OU EXAME
+                        @Html.DropDownList("IDESP_EXAM", null, new { style = "width: 100%", @Class = "form-control" })
+                        Status
+                        <select class="form-control" id="STATUS"name="STATUS">
+                            <option value="1">ANDAMENTO</option>
+                            <option value="2">CONCLUIDO</option>
+                            <option value="3">CANCELADO</option>
+                        </select>
+                        PREVISAO DE RETORNO
+                        <div class='input-group date'>
+                            <input type="date" name="bday" id="PREVISAO" class="form-control" style="width:100%;"/>
+                        </div>
+                        OBSERVAÇÃO
+                        <textarea class="form-control" rows="3" placeholder="Enter ..." name="OBSERVACAO" required></textarea>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-info btn-flat">GERAR CREDENCIAMENTOS</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_COLABORADOR }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

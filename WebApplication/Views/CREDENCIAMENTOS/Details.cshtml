@@ -1,0 +1,57 @@
+﻿@model WebApplication.Models.CREDENCIAMENTOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CREDENCIAMENTOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COLABORADORES.NOME_FANTASIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLABORADORES.NOME_FANTASIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTRATO.NOME_CLIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTRATO.NOME_CLIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESPECIALIDADE_EXAMES.NOME_ESPECIALIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESPECIALIDADE_EXAMES.NOME_ESPECIALIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STATUS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBSERVACAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBSERVACAO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_CREDENCIAMENTOS }) |
+</p>

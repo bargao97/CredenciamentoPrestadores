@@ -1,0 +1,33 @@
+﻿@model WebApplication.Models.ESPECIALIDADE_EXAMES
+
+@{
+    ViewBag.Title = Model.NOME_ESPECIALIDADE;
+}
+
+
+<div>
+    <h4>ESPECIALIDADE_EXAMES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_ESPECIALIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_ESPECIALIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_EXAM_ESP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_EXAM_ESP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_ESPECIALIDADE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

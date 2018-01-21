@@ -1,0 +1,176 @@
+﻿@model WebApplication.Models.COLABORADORES
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>COLABORADORES</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_FANTASIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NOME_FANTASIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAZAO_SOCIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAZAO_SOCIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF_CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF_CNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DDD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DDD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEL2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_LOGRADOURO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_LOGRADOURO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGRADOURO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOGRADOURO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPLEMENTO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPLEMENTO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BAIRRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BAIRRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESPECIALIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESPECIALIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLIENTE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLIENTE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIPO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

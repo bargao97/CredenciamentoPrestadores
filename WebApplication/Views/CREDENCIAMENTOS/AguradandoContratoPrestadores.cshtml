@@ -1,0 +1,14 @@
+﻿@model IEnumerable<WebApplication.Models.COLABORADORES>
+@using WebApplication.Models
+
+@{
+    if (Model != null)
+    {
+        <div class="row">
+            <h3>Resultado da busca:</h3>
+            <br />
+           @Html.Partial("AguradandoContratoPrestadoresPartial")
+        </div>
+    }
+}
+
